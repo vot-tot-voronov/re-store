@@ -5,17 +5,15 @@ import { Link } from 'react-router-dom';
 const ShopHeader = ({ numItems, total }) => {
   return (
     <header className="shop-header row">
-      <Link to="/" >
+      <Link to="/">
         <div className="logo text-dark">ReStore</div>
       </Link>
-      <Link to="/cart" >
+      <Link to="/cart">
         <div className="shopping-cart">
           <i className="cart-icon fa fa-shopping-cart" />
           {numItems} items (${total})
         </div>
       </Link>
-      
-      
     </header>
   );
 };

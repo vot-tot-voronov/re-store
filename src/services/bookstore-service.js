@@ -1,5 +1,6 @@
 
 export default class BookstoreService {
+
   data = [
     {
       id: 1,
@@ -14,16 +15,16 @@ export default class BookstoreService {
       price: 45,
       coverImage: 'https://images-na.ssl-images-amazon.com/images/I/414CRjLjwgL._SX403_BO1,204,203,200_.jpg'}
   ];
+
   getBooks() {
     return new Promise((resolve, reject) => {
       setTimeout(() => {
-        if (Math.random > 0.75) {
-          reject(new Error('Something went wrong :('));
+        if (Math.random() > 0.75) {
+          reject(new Error('Something bad happened'));
         } else {
           resolve(this.data);
         }
       }, 700);
     });
   }
-
 }
